@@ -8,19 +8,7 @@
   <p>Rock-Paper-Scissors-Game</p>
     <div>
       <button class = "button" onclick="
-      const randomNumber = Math.random();
-      
-      let computerMove = '';
-      
-      if (randomNumber >= 0 && randomNumber < 1/3) {
-        computerMove = 'rock';
-      }
-      else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-        computerMove = 'paper';
-      }
-      else if (randomNumber >= 2/3 && randomNumber < 1) {
-        computerMove = 'scissors';
-      }
+      let computerMove = generateComputerMove();
 
       let result = '';
 
@@ -38,20 +26,7 @@
       🪨
       </button>
       <button class = "button" onclick="
-      randomNumber = Math.random();
-      
-      computerMove = '';
-      
-      if (randomNumber >= 0 && randomNumber < 1/3) {
-        computerMove = 'rock';
-      }
-      else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-        computerMove = 'paper';
-      }
-      else if (randomNumber >= 2/3 && randomNumber < 1) {
-        computerMove = 'scissors';
-      }
-
+      computerMove = generateComputerMove();
       result = '';
 
       if (computerMove === 'rock') {
@@ -69,20 +44,7 @@
       ✋
       </button>
       <button class = "button" onclick="
-      randomNumber = Math.random();
-      
-      computerMove = '';
-      
-      if (randomNumber >= 0 && randomNumber < 1/3) {
-        computerMove = 'rock';
-      }
-      else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-        computerMove = 'paper';
-      }
-      else if (randomNumber >= 2/3 && randomNumber < 1) {
-        computerMove = 'scissors';
-      }
-
+      computerMove = generateComputerMove();
       result = '';
 
       if (computerMove === 'rock') {
@@ -99,5 +61,19 @@
       ✂️
       </button>
     </div>
+    <script>
+      function generateComputerMove() {
+      const randomNumber = Math.random();
+      if (randomNumber >= 0 && randomNumber < 1/3) {
+        return 'rock';
+      }
+      else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+        return 'paper';
+      }
+      else if (randomNumber >= 2/3 && randomNumber < 1) {
+        return 'scissors';
+      }
+    }
+    </script>
 </body>
 </html>
