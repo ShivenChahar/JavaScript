@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    body { padding: 20px; transition: background-color 0.3s; }
+        button { padding: 10px; margin: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Clickk Buttons To Change Background Color!</h1>
+  <button onclick="changeToRed()">Change Colour->Red</button>
+  <button onclick="changeToBlue()">Change Colour->Blue</button>
+  <button onclick="changeToYellow()">Change Colour->Yellow</button>
+  <button onclick="changeToPink()">Change Colour->Pink</button>
+  <script>
+    function changeToRed() {
+      document.body.style.background = "red";
+    }
+    function changeToBlue() {
+      document.body.style.background = "blue";
+    }function changeToYellow() {
+      document.body.style.background = "yellow";
+    }function changeToPink() {
+      document.body.style.background = "pink";
+    }
+  </script>
+</body>
+</html>
