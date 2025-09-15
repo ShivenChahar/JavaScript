@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Document</title>
+</head>
+<body>
+  <h1>Hii! Click Start to Start and Stop to Stop</h1>
+  <button id="start"> Start</button>
+  <button id="stop">Stop</button>
+</body>
+<script>
+  const sayName = function() {
+    console.log("Shiven");
+  }
+
+  let printMe;
+  
+  const startPrinting = function() { 
+    printMe = setInterval(sayName, 1000);
+  }
+
+  const stopPrinting = function() {
+    clearInterval(printMe);
+    console.log('STOPPPED');
+  }
+
+  document.querySelector('#start').addEventListener('click',startPrinting)
+
+  document.querySelector('#stop').addEventListener('click', stopPrinting)
+</script>
+</html>
